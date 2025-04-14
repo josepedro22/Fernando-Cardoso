@@ -1,0 +1,322 @@
+/*----------------------Navbar----------------------*/
+.navbar nav .nav-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.navbar .nav-link.active {
+    color: #23435C;
+    font-weight: bold;
+    /* Define a cor para o link ativo */
+}
+
+.nav-link:hover {
+    color: #529ee0;
+    /* Tom mais claro no hover */
+    transition: color 0.3s ease;
+}
+
+
+.navbar {
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: repeat;
+    /* Impede a repetição da imagem */
+    height: 90px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1060;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        height: 110px;
+    }
+}
+
+.navbar-collapse {
+    z-index: 1050; /* ou mais alto, se necessário */
+    position: relative;
+}
+
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.95); /* fundo branco quase opaco */
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+.navbar-brand {
+    padding-left: 50px;
+}
+
+@media (max-width: 991px) {
+    .navbar-brand{
+        padding-left: 20px;
+    }
+}
+
+
+.navbar-nav {
+    padding-right: 50px;
+}
+
+
+/*----------------------Footer----------------------*/
+footer {
+    background-color: #23435C;
+    color: white;
+    padding: 1.1rem 0;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-logo-rounded {
+    margin-left: 70px;
+    width: 200px;
+    object-fit: contain;
+  }
+  
+  .footer-text {
+    text-align: center;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .footer-rights {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: end;
+    margin-right: 70px;
+    gap: 15px;
+  }
+  
+  .social-icons svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-logo-rounded {
+      width: 150px;
+    }
+  
+    .footer-rights {
+      font-size: 12px;
+      padding: 0 10px;
+    }
+  }
+  
+
+
+
+  /*----------------------Carousel----------------------*/
+
+/* Estilos personalizados para o carrossel identificado como #customCarousel */
+#customCarousel .carousel-item {
+    position: relative;
+    height: 700px; /* Define a altura do carrossel */
+    overflow: hidden; /* Garante que a imagem não extrapole os limites */
+}
+
+#customCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+    filter: brightness(70%); /* Reduz o brilho da imagem para criar um efeito mais suave */
+    opacity: 0.6;
+    z-index: 1;
+}
+
+#customCarousel .carousel-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* Camada branca translúcida */
+    mix-blend-mode: overlay; /* Mistura a camada translúcida com a imagem */
+    z-index: 0; /* Garante que o overlay fique sobre a imagem */
+}
+
+
+#customCarousel .carousel-caption {
+    text-align: center; /* Centraliza todo o conteúdo */
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    position: absolute; /* Posiciona a legenda relativa ao slide */
+    top: 50%; /* Move para o centro vertical */
+    left: 50%; /* Move para o centro horizontal */
+    transform: translate(-50%, -50%); /* Garante que o ponto central seja exato */
+    max-width: 90%; /* Ajusta a largura */
+    white-space: nowrap; /* Permite quebras de linha */
+}
+
+#customCarousel .carousel-caption h5 {
+    font-size: 7rem;
+    align-items: center;
+    display: flex; /* Ativa o flexbox para alinhamento */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra aplicada somente ao título */
+    font-family: 'Jost', sans-serif; /* Fonte limpa e moderna */
+}
+
+#customCarousel .carousel-caption p {
+    font-size: 2rem;
+    font-weight: 400; /* Peso leve para o texto geral */
+    color: #fff;
+    font-family: 'Raleway', sans-serif; /* Fonte limpa e moderna */
+}
+
+@media (max-width: 768px) {
+    #customCarousel .carousel-caption h5 {
+        font-size: 2.5rem;
+    }
+    
+    #customCarousel .carousel-caption p {
+        font-size: 0.8rem;
+    }   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #customCarousel .carousel-caption h5 {
+        font-size: 4.5rem;
+    }
+    
+    #customCarousel .carousel-caption p {
+        font-size: 1.2rem;
+    }   
+}
+
+
+#customCarousel .carousel-caption p span {
+    font-weight: 700; /* Destaca palavras específicas em negrito */
+    color: inherit; /* Mantém a cor branca sem alterações */
+
+}
+  
+.carousel-item {
+    transition: transform 2s ease-in-out, opacity 1s ease-in-out; /* Controla a duração e suavidade */
+}
+
+.custom-container {
+    border: 2px solid #cbb2b2; /* Similar color for the border */
+    border-radius: 25px; /* Rounded edges */
+    padding: 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px; /* Optional max width */
+    margin: 90px auto; /* Center horizontally and add margin */
+}
+
+.custom-container span {
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/*---------------- Hero Section with Background Image---------------- */
+.portfolio-hero {
+    background-image: url('Fotos/Banner-Opcao-03-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 510px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.portfolio-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.144);
+    /* Overlay branco translúcido */
+    z-index: 0;
+    /* Coloca o overlay atrás do conteúdo */
+}
+
+.portfolio-hero h1 {
+    font-size: 60px;
+    /* Tamanho da fonte */
+    margin-top: 0;
+    padding-top: 30px;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.portfolio-title3 {
+    font-size: 20px;
+    /* Tamanho da fonte */
+    color: black;
+    position: relative;
+
+}
+
+@media (max-width: 768px) {
+    .portfolio-title3 {
+        font-size: 10px;
+        font-weight: 700;
+    }
+}
+
+
+/*---------------------Contactos-----------------------*/
+
+  .contact-title {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .contact-subtitle {
+    color: #888;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-email {
+    font-size: 15px;
+    color: #555;
+    text-decoration: underline;
+  }
+  
+  .contact-email:hover {
+    color: #000;
+    text-decoration: none;
+  }
+  
