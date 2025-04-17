@@ -12,3 +12,9 @@ document.addEventListener('click', function (event) {
         collapseInstance.hide();
     }
 });
+
+//Função para não ficar nada por baixo da Navbar
+document.addEventListener("DOMContentLoaded", function () {
+    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+    document.body.style.paddingTop = navbarHeight + "px";
+});
