@@ -320,3 +320,48 @@ footer {
     text-decoration: none;
   }
   
+
+
+  /*---------------------Modais-----------------------*/
+
+  .book-cover {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .book-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .book-cover:hover img {
+    transform: scale(1.05);
+    filter: brightness(30%);
+  }
+  
+  .book-title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+  
+  .book-cover:hover .book-title {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
