@@ -139,6 +139,11 @@ footer a {
 @media (max-width: 768px) {
   .footer-logo-rounded {
     width: 150px;
+    margin-left: 0;
+    
+  }
+  .social-icons {
+    margin-right: 0;
   }
 
   .footer-rights {
@@ -147,6 +152,25 @@ footer a {
   }
 }
 
+
+@media (max-width: 576px) {
+  nav.navbar img {
+    width: 140px;
+    height: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+
+}
 
 
 
@@ -373,7 +397,36 @@ footer a {
   margin-bottom: 100px;
 }
 
+.social-icons-contactos {
+  display: flex;
+  justify-content: start;
+  margin-right: 70px;
+  gap: 15px;
+}
 
+.social-icons-contactos svg {
+  width: 30px;
+  height: 30px;
+  fill: #23435c7a; /* azul Bootstrap por exemplo */
+  transition: fill 0.3s ease;
+}
+
+.social-icons-contactos svg:hover {
+  fill: #23435c; /* tom mais escuro ao passar o rato */
+}
+
+form button.btn {
+  width: 120px;
+  height: 40px;
+  background-color: #23435c;   /* Cor de fundo */
+  color: white;                /* Cor do texto */
+  border: none;
+}
+
+form button.btn:hover {
+  background-color: #23435c7a;   /* Cor no hover */
+  color: #fff;
+}
 
 /*---------------------Modais-----------------------*/
 
@@ -469,23 +522,6 @@ footer a {
   font-family: 'Jost', sans-serif;
 }
 
-.about-text .btn {
-  background-color: #863d3d;
-  /* Vermelho vivo */
-  border: none;
-  border-radius: 30px;
-  padding: 10px 25px;
-  font-family: 'Jost', sans-serif;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  color: white;
-
-}
-
-.about-text .btn:hover {
-  background-color: #863d3d86;
-  /* Vermelho mais escuro no hover */
-}
 
 .image-grid {
   display: grid;
@@ -515,16 +551,6 @@ footer a {
   /* Azul escuro para título */
 }
 
-.about-us-section .divider {
-  height: 3px;
-  width: 60px;
-  background-color: #863d3d;
-  /* Rosa claro */
-  border-radius: 50px;
-  margin: 10px 0 20px;
-  /* Espaçamento superior e inferior */
-}
-
 .about-us-section p {
   color: #6c757d;
   /* Cinza escuro */
@@ -533,22 +559,6 @@ footer a {
   /* Melhor legibilidade */
 }
 
-.about-us-section .btn-danger {
-  background-color: #863d3d;
-  /* Vermelho vivo */
-  border: none;
-  border-radius: 30px;
-  padding: 10px 25px;
-  font-family: 'Jost', sans-serif;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-
-}
-
-.about-us-section .btn-danger:hover {
-  background-color: #863d3d86;
-  /* Vermelho mais escuro no hover */
-}
 
 /* Estilos das imagens */
 .about-us-images {
@@ -625,3 +635,47 @@ footer a {
 }
 
 /*------------------------dsdsds-------------------*/
+
+/*
+body {
+  background-color: #1c1c1c;
+  color: white;
+}
+*/
+
+
+/*---------------------Livros-----------------------*/
+
+
+.btn-yellow {
+  background-color: #4479a1;
+  color: black;
+  font-weight: bold;
+}
+
+.btn-yellow:hover {
+  background-color: #23435c7a;
+}
+
+/* Responsividade extra para Livros */
+@media (max-width: 768px) {
+  .book-cover {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .btn-yellow {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .book-info li {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+}
+
+
+
